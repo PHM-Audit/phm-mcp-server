@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "phm-mcp-server"
+version = "1.0.0"
+description = "Deterministic physics plausibility tools as an MCP server (offline subset of the PHM engine)."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "PHM-Audit" }]
+dependencies = [
+    "mcp>=1.0",
+    "numpy>=1.20",
+    "phm-lite-check @ git+https://github.com/PHM-Audit/phm-lite-check",
+]
+
+[project.urls]
+Homepage = "https://github.com/PHM-Audit/phm-mcp-server"
+
+[tool.setuptools]
+packages = []
+py-modules = ["server"]
