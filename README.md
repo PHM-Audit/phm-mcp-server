@@ -17,6 +17,14 @@ These checks are necessary, not sufficient: a PASS verdict does not imply
 correctness. Not affiliated with or endorsed by Anthropic, OpenAI, or the
 MCP project; adapters are community-provided.
 
+## Registry listings
+
+- Listed in the official MCP Registry as `io.github.PHM-Audit/phm-lite-check@1.0.1`
+  ([registry.modelcontextprotocol.io](https://registry.modelcontextprotocol.io),
+  listing verified 2026-11-06). Registry listing is metadata publication and
+  namespace verification — it is not an endorsement or certification.
+- Also indexed by the mcprush community MCP directory.
+
 ## Claude Desktop setup
 
 Add to `claude_desktop_config.json`:
