@@ -1,5 +1,7 @@
 # phm-mcp-server
 
+[![PHM Physics Check MCP server](https://mcprush.com/badge/phm-physics-check-mcp/card.svg)](https://mcprush.com/to/phm-physics-check-mcp?ref=badge)
+
 **Deterministic physics plausibility tools for MCP clients** (Claude
 Desktop, Cursor, Cline, and any Model Context Protocol host).
 
@@ -23,7 +25,7 @@ MCP project; adapters are community-provided.
   ([registry.modelcontextprotocol.io](https://registry.modelcontextprotocol.io),
   listing verified 2026-11-06). Registry listing is metadata publication and
   namespace verification — it is not an endorsement or certification.
-- Also indexed by the mcprush community MCP directory.
+- Also listed in the [mcprush](https://mcprush.com/phm-audit/phm-physics-check-mcp) community MCP directory (independent security grade A, 3 tools, 14 client compatibilities). Directory listing is not an endorsement.
 
 ## Claude Desktop setup
 
