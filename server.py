@@ -8,12 +8,15 @@ Exposes the phm-lite-check offline subset as Model Context Protocol tools:
 
 Zero-external-service: all checks run locally, deterministic, offline subset
 of the PHM engine (proprietary methods excluded).
-Requires: mcp (pip install mcp) and phm-lite-check (pip install from GitHub).
+Requires: mcp>=1.10,<2  (pip install 'mcp>=1.10,<2' -- FastMCP was renamed to
+MCPServer in mcp 2.x; pin v1 to keep the stdio API stable) and phm-lite-check
+(pip install from GitHub).
 Run: python server.py   (stdio transport, Claude Desktop standard)
 """
 import json
 
 from mcp.server.fastmcp import FastMCP
+from mcp.types import ToolAnnotations
 
 from phm_lite_check import check_text, check_quantity
 from phm_lite_check.robotics import check_robotics_record
@@ -21,7 +24,10 @@ from phm_lite_check.robotics import check_robotics_record
 mcp = FastMCP("phm-physics-check")
 
 
-@mcp.tool()
+@mcp.tool(
+    annotations=ToolAnnotations(
+        readOnlyHint=True, destructiveHint=False,
+        idempotentHint=True, openWorldHint=False))
 def physics_text_check(text: str) -> str:
     """Check LLM-generated text for physically implausible numeric claims
     (deterministic offline checker).
@@ -37,7 +43,10 @@ def physics_text_check(text: str) -> str:
     return json.dumps(check_text(text))
 
 
-@mcp.tool()
+@mcp.tool(
+    annotations=ToolAnnotations(
+        readOnlyHint=True, destructiveHint=False,
+        idempotentHint=True, openWorldHint=False))
 def physics_quantity_check(value: float, unit: str) -> str:
     """Check one numeric value against physical law (deterministic offline checker).
 
@@ -59,7 +68,10 @@ def physics_quantity_check(value: float, unit: str) -> str:
                        "engine": "PHM-Lite", "deterministic": True})
 
 
-@mcp.tool()
+@mcp.tool(
+    annotations=ToolAnnotations(
+        readOnlyHint=True, destructiveHint=False,
+        idempotentHint=True, openWorldHint=False))
 def robotics_data_check(record_json: str) -> str:
     """Check a robotics / embodied-AI dataset record for physical plausibility
     (deterministic offline checker).
