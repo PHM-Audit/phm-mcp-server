@@ -1,6 +1,6 @@
 # phm-mcp-server
 
-[![M8ven Score](https://m8ven.ai/badge/mcp/phm-audit/phm-mcp-server)](https://m8ven.ai/mcp/phm-audit/phm-mcp-server?s=readme)
+[![M8ven Score](https://m8ven.ai/badge/mcp/phm-audit-phm-mcp-server-1kl0m9?v=8bdaaabcb95f4436ad3cce53908d3ad3)](https://m8ven.ai/mcp/phm-audit-phm-mcp-server-1kl0m9?s=readme)
 
 [![PHM Physics Check MCP server](https://mcprush.com/badge/phm-physics-check-mcp/card.svg)](https://mcprush.com/to/phm-physics-check-mcp?ref=badge)
 
