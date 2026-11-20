@@ -1,5 +1,7 @@
 # phm-mcp-server
 
+[![M8ven Score](https://m8ven.ai/badge/mcp/phm-audit/phm-mcp-server)](https://m8ven.ai/mcp/phm-audit/phm-mcp-server?s=readme)
+
 [![PHM Physics Check MCP server](https://mcprush.com/badge/phm-physics-check-mcp/card.svg)](https://mcprush.com/to/phm-physics-check-mcp?ref=badge)
 
 **Deterministic physics plausibility tools for MCP clients** (Claude
